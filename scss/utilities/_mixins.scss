@@ -1,0 +1,57 @@
+@mixin block-display {
+    display: inline-block;
+    content: "";
+}
+
+@function invertValues($top, $right, $bottom, $left) {
+    @if $dir == right {
+        @return $top $left $bottom $right;
+    }
+    @else {
+        @return $top $right $bottom $left;
+    }
+}
+
+@each $name, $color in $color-map {
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+    .btn-#{$name} {
+        background: $color;
+        border-color: $color;
+        &:hover, &:focus, &:active {
+            background: rgba($color, 0.8);
+        }
+    }
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
+  
+@each $name, $color in $color-map {
+    @for $i from 1 through 9 {
+        .bg-#{$name}-#{$i} {
+            background-color: $color;
+        }
+    }
+}
+
+$fontSize: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30;
+
+@each $size in $fontSize {
+    .font-#{$size}, .font-#{$size} p {
+        font-size: #{$size}px !important;
+
+        @media (max-width: 1400px) {
+            font-size: #{$size - 2}px !important;
+        }
+
+        @media (max-width: 991px) {
+            font-size: #{$size - 3}px !important;
+        }
+
+        @media (max-width: 575px) {
+            font-size: #{$size - 4}px !important;
+        }
+    }
+}

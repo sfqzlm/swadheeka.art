@@ -1,0 +1,30 @@
+.btn {
+    --bs-border-radius: 6px;
+    
+    &-view-now {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 295px;
+        height: 73px;  
+        border-radius: 20px;
+        background: linear-gradient(270deg, rgba(#7E7F84, 100%) 0%, rgba(2, 2, 2, 0) 100%);
+        font-family: Syne;
+        font-size: 16px;
+        font-weight: 400; 
+        font-family: $font-stack-1; 
+        text-transform: uppercase;  
+        color: #ffffff;
+        transition: all 0.5s linear;
+ 
+        @include media-breakpoint-down(xl) { 
+            padding-inline: 10px;
+            padding-block: 10px;
+        }
+     
+        &:hover {
+            padding-inline: 10px; 
+            opacity: 0.8;
+        }
+    } 
+} 

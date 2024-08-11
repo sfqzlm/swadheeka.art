@@ -1,0 +1,100 @@
+// font 
+$font-stack-1: "Syne", sans-serif;
+$font-stack-2: "Inter", sans-serif;
+
+
+/*
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900
+
+.inter-<uniquifier> {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+.syne-<uniquifier> {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} 
+*/
+
+// Colors
+$primary-color: #0088CE;  
+$primary-color-1: #0187CE;
+$primary-color-2: #6CB9E3;
+$secondary-color: #4F5967; 
+
+$white-color: #ffffff;
+$black-color: #151515;
+$black-color-1: #25282A;
+$black-color-2: #191C1D;
+$black-color-3: #3C4041;
+$black-color-4: #24282A;
+
+$text-grey: #4F5967;  
+$footer-black: #1A1A1A;
+$footer-menu: #AFB5BE;
+  
+$primary: #FFC90A;
+
+$white: #ffffff;
+$black: #151515;
+$grey: #DFDFDF;
+$grey-01: #7E7F84;
+$grey-02: #CBCFD5;
+$grey-03: #515966;
+$grey-04: #747474;
+$grey-05: #4B4F50;
+$grey-06: #838A97;
+$grey-07: #646668;
+$grey-008: #F8F9FA;
+$grey-009: #E9EAEA;
+$grey-08: #5C6470;
+$grey-09: #EDEEEE;
+$grey-0010: #969899;
+$grey-0011:#EDEEF0;
+$grey-0012:#808283;
+
+
+
+$color-map: (
+	primary-color: #0088CE,  
+	primary-color-1: #0187CE,  
+	primary-color-2: #6CB9E3,  
+	secondary-color: #4F5967, 
+
+	white-color: #ffffff,
+	black-color: #151515,
+	black-color-1: #25282A,
+	black-color-2: #191C1D,
+	black-color-3: #3C4041,
+	black-color-4: #24282A,
+	text-grey: #4F5967,  
+	footer-black: #1A1A1A,
+	footer-menu: #AFB5BE,
+	
+	primary: #FFC90A, 
+ 
+	white: #fff,
+	black: #151515, 
+	grey: #DFDFDF,
+	grey-01: #7E7F84,
+	grey-02: #CBCFD5,
+	grey-03: #515966,
+	grey-04: #747474,
+	grey-05: #4B4F50,
+	grey-06: #838A97,
+	grey-07: #646668,
+	grey-008: #F8F9FA,
+	grey-009: #E9EAEA,
+	grey-08: #5C6470,
+	grey-09: #EDEEEE,
+	grey-0010: #969899,
+	grey-0011:#EDEEF0,
+	grey-0012:#808283,
+	
+);

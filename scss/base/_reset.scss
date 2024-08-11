@@ -1,0 +1,320 @@
+html {
+    scroll-behavior: smooth;  
+    margin: 0;
+    padding: 0;
+	background-color: #000000;
+}
+ 
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {  
+    background: #EDEDEC;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: $text-grey; 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: $primary-color;
+}
+
+body {
+    font-family: $font-stack-1;
+    font-weight: 400; 
+    text-align: start;
+    font-size: 16px; 
+	background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, #020202 50.14%);
+
+    color: #ffffff;
+    margin: 0;
+    padding: 0;  
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul, li, figure {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-stack-1;
+	line-height: 1.1;
+    font-weight: 700;
+}
+ 
+// h3 { 
+//     font-size: 48px; 
+
+//     @include media-breakpoint-down(md) { 
+//         font-size: 42px;
+//     }
+
+//     @include media-breakpoint-down(md) { 
+//         font-size: 37px;
+//     }
+// }
+
+.font {
+	&-thin {
+		font-weight: 300;
+	}
+	&-normal {
+		font-weight: 400;
+	}
+	&-medium {
+		font-weight: 500;
+	}
+	&-bold {
+		font-weight: 700;
+	}
+}
+
+ 
+
+
+h2 {
+	font-size: 69px;
+	line-height: 1.2; 
+
+    @include media-breakpoint-down(md) { 
+        //font-size: 18px;
+		//background-color: green;
+    }
+}
+
+h3 {
+	font-size: 47px;
+	line-height: 1.2;
+
+    @include media-breakpoint-down(lg) {  
+		font-size: 32px; 
+    } 
+}
+
+h4 { 
+    font-size: 23px;
+
+    @include media-breakpoint-down(md) {  
+		font-size: 20px; 
+    }
+} 
+
+h5 { 
+    font-size: 40px; 
+
+    @include media-breakpoint-down(md) { 
+        font-size: 35px;
+    }
+} 
+ 
+h6 { 
+    font-size: 20px;
+
+    @include media-breakpoint-down(md) { 
+        font-size: 18px;
+    }
+
+    @include media-breakpoint-down(sm) { 
+        font-size: 16px;
+    }
+}
+
+.font-57 {
+	font-size: 57px;
+}
+  
+.font-33 {
+	font-size: 33px;
+}
+  
+.font-28 {
+	font-size: 28px;
+}
+
+.text-justify {
+	text-align: justify;
+}
+  
+p {
+    font-size: 18px; 
+    font-family: $font-stack-1; 
+    line-height: 1.5; 
+
+	@include media-breakpoint-down(xxl) {
+		font-size: 16px; 
+	}
+    
+    & strong {
+        font-weight: 700;
+    }
+
+
+	&:last-child { 
+		margin-bottom: 0;
+	}
+
+    &.p-bullet {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute; 
+            height: 7px;
+            width: 7px;
+            border-radius: 10px;
+            background: $primary-color;  
+            top: 11px; 
+        }
+    }
+}
+
+.font {
+    &-heading {
+        font-family: $font-stack-1; 
+    }
+    &-body { 
+        font-family: $font-stack-2; 
+    }
+}
+  
+.imageGreyBox, .imageWhiteBox {
+	position: relative;
+}
+
+.imageGreyBox::after {
+	background: #F8F8F8;
+	right: 0;
+}
+
+.imageWhiteBox::after {
+	background: #ffffff;
+	left: 0;
+}
+
+.imageGreyBox::after, .imageWhiteBox::after {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+	content:" ";	
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	-o-transition: all 1.5s;
+	transition: all 1.5s;
+}
+
+.imageGreyBox.imgShow::after, .imageWhiteBox.imgShow::after {
+	width: 0;	
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	-o-transition: all 1.5s;
+	transition: all 1.5s;
+}
+
+@include media-breakpoint-up(xl) {
+
+	@-webkit-keyframes fade-in {
+		from {
+		  opacity: 0;}
+		to {
+		  opacity: 1;} 
+	}
+	  
+	@keyframes fade-in {
+		from {
+		  opacity: 0; }
+		to {
+		  opacity: 1; } 
+	}
+
+	.show-item {
+		-webkit-animation: fade-in 1s ease;
+		animation: fade-in 1s ease; 
+	}
+	
+	.bottom-in-hide {
+		-webkit-transition: all ease .5s;
+		-o-transition: all ease .5s;
+		transition: all ease .5s;
+		-webkit-transform: translateY(35px);
+		-ms-transform: translateY(35px);
+		transform: translateY(35px);
+		opacity: 0; 
+	}
+	
+	.from-bottom {
+		-webkit-transition: all ease .5s;
+		-o-transition: all ease .5s;
+		transition: all ease .5s;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1; 
+	}
+	
+	.left-in-hide {
+		-webkit-transition: all ease 1s;
+		-o-transition: all ease 1s;
+		transition: all ease 1s;
+		-webkit-transform: translateX(-150px);
+		-ms-transform: translateX(-150px);
+		transform: translateX(-150px);	
+		opacity: 0; 
+	}
+	
+	.from-left {
+		-webkit-transition: all ease 1s;
+		-o-transition: all ease 1s;
+		transition: all ease 1s;
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+		opacity: 1; 
+	}
+	
+	.right-in-hide {
+		-webkit-transition: all ease 1s;
+		-o-transition: all ease 1s;
+		transition: all ease 1s;
+		-webkit-transform: translateX(150px);
+		-ms-transform: translateX(150px);
+		transform: translateX(150px);
+		opacity: 0; 
+	}
+	
+	.from-right {
+		-webkit-transition: all ease 1s;
+		-o-transition: all ease 1s;
+		transition: all ease 1s;
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+		opacity: 1; 
+	}
+} 
+
+.font-awesome-6 {  
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: var(--fa-display,inline-block);
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-rendering: auto;
+	font-weight: 900;
+	font-family: "Font Awesome 6 Free";
+}
+
+
