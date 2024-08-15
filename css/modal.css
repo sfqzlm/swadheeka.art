@@ -1,0 +1,43 @@
+/* Overlay styles */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Shadow effect */
+    z-index: 999;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px; /* Gap from the bottom */
+    left: 20px; /* Gap from the left */
+    right: 20px; /* Gap from the right */
+    max-height: 80%; /* Max height */
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: auto;
+    z-index: 1000;
+  }
+  
+  /* Image inside modal */
+  .modal img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Close button styles */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
