@@ -14,15 +14,17 @@
   .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    bottom: 20px; /* Gap from the bottom */
-    left: 20px; /* Gap from the left */
-    right: 20px; /* Gap from the right */
-    max-height: 80%; /* Max height */
-    margin: auto;
+    bottom: 0px; /* Gap from the bottom */
+    top: 10%; /* Gap from the top */
+    left: 50%; /* Start at 50% from the left */
+    transform: translateX(-50%); /* Adjust position back by 50% of its width to center */
+    width: 90%; /* Set a width, adjust as needed */
+    max-height: 90%; /* Set a max height to fit within the viewport */
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 2px;
     overflow: auto;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */  
   }
   
   /* Image inside modal */
@@ -33,11 +35,23 @@
   
   /* Close button styles */
   .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1001;
+    position: fixed; /* Keeps the button fixed in place relative to the viewport */
+    top: 10px; /* Distance from the top of the viewport */
+    right: 10px; /* Distance from the right of the viewport */
+    font-size: 36px; /* Large font size for better visibility */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    text-align: center; /* Center text inside the button */
+    line-height: 50px; /* Center text vertically */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    z-index: 1001; /* High z-index to ensure it's on top of other elements */
+    background-color: rgb(85, 84, 84); /* Red background color */
+    color: #fff; /* White text color */
+    border: 2px solid rgb(62, 61, 61); /* Red border to match the background */
+    border-radius: 50%; /* Makes the button circular */
+    display: flex; /* Use flexbox to center text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */  
   }
   
