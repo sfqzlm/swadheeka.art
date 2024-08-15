@@ -99,7 +99,7 @@
               <h5>VEGAN DELIGHT</h5>
               <h4>UI/UX Case Study</h4>
               <p>Mobile app for vegan cake and pastries</p>
-              <button class="btn-view-now" onclick="openImageInPopup('assets/works/vegan-delight.jpg')" aria-label="View Vegan Delight Image">View Now</button>
+              <button class="btn-view-now" onclick="openImageInPopup('assets/works/vegan-delight.jpg')" aria-label="Vegan Delight">View Now</button>
             </div>
           </div>
 
@@ -114,7 +114,7 @@
               <h5>KSD TECHNOLOGIES</h5>
               <h4>UI/UX DESIGN</h4>
               <p>website for 3D printing</p>
-              <a href="#" class="btn-view-now">View Now</a>
+              <button class="btn-view-now" onclick="openImageInPopup('assets/works/kds-technologies.jpg')" aria-label="KSD Technologies">View Now</button>
             </div>
           </div>
 
@@ -129,7 +129,7 @@
               <h5>INTELA SOLUTIONS</h5>
               <h4>WEBSITE REDESIGN</h4>
               <p>Website for IT solution and cybersecurity</p>
-              <a href="#" class="btn-view-now">View Now</a>
+              <button class="btn-view-now" onclick="openImageInPopup('assets/works/intela-solutions.jpg')" aria-label="Intela Solutions">View Now</button>
             </div>
           </div>
         </div>
@@ -167,7 +167,7 @@
                   both during my tenure as a graphic designer
                   and through my personal hobbies.</p>
 
-                <p class="font-33 text-uppercase">Go through my creatives</p>
+                <p class="font-33 text-uppercase" onclick="openImageInPopup('assets/works/creatives.jpg')" >Go through my creatives</p>
               </div>
             </div>
           </div>
@@ -230,9 +230,10 @@
     <!-- Modal -->
     <div id="imageModal" class="modal">
       <span class="close" onclick="closeModal()" aria-label="Close Modal">&times;</span>
-      <img id="modalImage" src="" alt="Popup Image">
+      <div class="modal-content">
+        <img id="modalImage" src="" alt="Popup Image">
+      </div>
     </div>
-
 
     <!-- <a href="javascript:void(0);" class="scrollup">
       <i class="fa-solid fa-arrow-up-long"></i>
