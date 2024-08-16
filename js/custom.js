@@ -365,8 +365,16 @@
     // });
   
     $(window).scroll(function () {
+      if ($(this).scrollTop() > 200) {
+        $('.header-main').addClass('small'); 
+      } else {
+          $('.header-main').removeClass('small'); 
+      } 
+    });
+  
+    $(window).scroll(function () {
       if ($(this).scrollTop() > 400) {
-          $('.scrollup').show();
+        $('.scrollup').show(); 
       } else {
           $('.scrollup').hide();
       } 
@@ -374,147 +382,15 @@
 
     $(".scrollup").click(function(){
       $(window).scrollTop(0);
-    });
- 
-    if($(".js-select2").length > 0) {
-      $(".js-select2").select2({
-        closeOnSelect : false,
-        placeholder : "Placeholder",
-        allowHtml: true,
-        allowClear: true,
-        tags: true 
-      });
-    }
-  });
-
-  
-  // Multi-select single
-
-  // if ($(".multi-selector2")[0]) {
-  //   $(document).ready(function () {
-  //     $(".multi-selector2").select2({
-  //       closeOnSelect : false,
-  //       tags: true
-  //     }).on('change', function() {
-  //       var $selected = $(this).find('option:selected');
-  //       var $container = $(this).parent(".multi-select").find('.multi-selector-result');
-            
-  //       var $list = $('<ul>');
-  //       $selected.each(function(k, v) {
-  //         var $li = $('<li class="yellow-tag">' +'<a> × </a>' + $(v).text() + '</li>');
-  //         $li.children('a')
-  //         .off('click.select2-copy')
-  //         .on('click.select2-copy', function(e) {
-  //           var $opt = $(this).data('select2-opt');
-        
-  //           $opt.prop('selected', false); 
-        
-  //           $opt.parents('select').trigger('change');
-  //         }).data('select2-opt', $(v));
-  //         $list.append($li);
-  //         $('.selected-items').show();
-  //         $('.countryToggle').show();
-  //       });
-  //       $container.html('').append($list);
-  //     }).trigger('change');
-  //   });
-  // }
- 
-
-  $(document).ready(function() { 
-
-    $(".js-playPause").each(function() { 
-      var myVideo = $(this).parent().find(".js-video-wrapper");
-      var button = $(this);
-
-      function playPause() { 
-        if (myVideo.get(0).paused) {
-            myVideo.get(0).play();
-            button.addClass("playing");
-            button.parent().find(".video-img").remove();
-            button.remove();
-        } else {
-            myVideo.get(0).pause();
-            button.removeClass("playing");
-        }
-      }
-
-      button.on("click", playPause);
     }); 
-     
-    if($('.js-select2-1').length > 0){
-      $('.js-select2-1').select2();
-      $('.js-select2-1').each(function() {
-        if ($(this).hasClass('with-check')) {  
-          $(this).on('select2:open', function() {
-            $('.select2-container--open').addClass('check-select-wrap');
-          });
-        } else   {}
-      }); 
-    }
+  });
 
-    function updateSelectResultHolders() {
-      setTimeout(function() {
-        $('.select-result-holder').has('.select-result .sel-val').addClass('withHas');
-      }, 2000);
-    } 
-    updateSelectResultHolders();
-    $('body').on('change', updateSelectResultHolders);
    
-    function updateSelectedValues() {
-        var result = '';
-        $('.js-select2-1').each(function() {
-            var selectedOptions = $(this).find(':selected');
-            var dropdownId = $(this).attr('id');
-            selectedOptions.each(function(index) {
-                var itemId = dropdownId + '-' + index;
-                result += '<div class="sel-val" id="' + itemId + '" data-dropdown="' + dropdownId + '" data-value="' + $(this).val() + '">' + $(this).text() + '</div>';
-            });
-        });
-        $('#selectedValues').html(result);
-    }
-
-    $('.js-select2-1').on('change', function() {
-        updateSelectedValues();
-        updateSelectResultHolders();
-    });
-
-    $('#selectedValues').on('click', '.sel-val', function() {
-        var valueToRemove = $(this).data('value');
-        var dropdownId = $(this).data('dropdown');
-        $(this).remove();
-        $('#' + dropdownId + ' option[value="' + valueToRemove + '"]').prop('selected', false);
-        $('#' + dropdownId).trigger('change');
-    });
-
-    $('#resetButton').on('click', function() {
-        $('.js-select2-1').val(null).trigger('change');
-        $('#selectedValues').html('');
-        $('.select-result-holder').removeClass('withHas');
-    });
-    
-    updateSelectedValues();
-    updateSelectResultHolders();
-  });
-
- 
-
  
  
-  $(".banner-slick").slick({
-    slidesToShow: 1,
-    infinite: false,
-    arrows: true,
-    dots: false
-  });
+ 
 
   
-  $(".companies-slick").slick({
-    slidesToShow: 1,
-    infinite: false,
-    arrows: true,
-    dots: true
-  });
 
 
    
@@ -526,29 +402,7 @@
   // });
 
 
-  $(".faculties-list-js").each(function() {
-    $(this).slick({
-      rtl: ($('html').attr('dir') == 'rtl') ? true : false,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      infinite: false,
-      focusOnSelect: true, 
-      arrows: true, 
-      dots: false,
-      autoplay:true,
-      responsive: [{  
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-        } 
-      }, {
-        breakpoint: 576,
-        settings: { 
-          slidesToShow: 1,
-        }
-      }]
-    });
-  });
+   
 
 
  
@@ -556,121 +410,8 @@
 
  
 
-function CountdownTracker(label, value){
-
-  var el = document.createElement('span');
-
-  el.className = 'flip-clock__piece';
-  el.innerHTML = '<b class="flip-clock__card card"><b class="card__top"></b><b class="card__bottom"></b><b class="card__back"><b class="card__bottom"></b></b></b>' + 
-    '<span class="flip-clock__slot">' + label + '</span>';
-
-  this.el = el;
-
-  var top = el.querySelector('.card__top'),
-      bottom = el.querySelector('.card__bottom'),
-      back = el.querySelector('.card__back'),
-      backBottom = el.querySelector('.card__back .card__bottom');
-
-  this.update = function(val){
-    val = ( '0' + val ).slice(-2);
-    if ( val !== this.currentValue ) {
-      
-      if ( this.currentValue >= 0 ) {
-        back.setAttribute('data-value', this.currentValue);
-        bottom.setAttribute('data-value', this.currentValue);
-      }
-      this.currentValue = val;
-      top.innerText = this.currentValue;
-      backBottom.setAttribute('data-value', this.currentValue);
-
-      this.el.classList.remove('flip');
-      void this.el.offsetWidth;
-      this.el.classList.add('flip');
-    }
-  }
   
-  this.update(value);
-}
-
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  return {
-    'Total': t,
-    'Days': Math.floor(t / (1000 * 60 * 60 * 24)),
-    'Hours': Math.floor((t / (1000 * 60 * 60)) % 24),
-    'Minutes': Math.floor((t / 1000 / 60) % 60),
-    'Seconds': Math.floor((t / 1000) % 60)
-  };
-}
-
-function Clock(countdown,callback) {
-  countdown = countdown ? new Date(Date.parse(countdown)) : false;
-  callback = callback || function(){};
-  
-  var updateFn = getTimeRemaining;
-
-  this.el = document.createElement('div');
-  this.el.className = 'flip-clock';
-
-  var trackers = {},
-      t = updateFn(countdown),
-      key, timeinterval;
-
-  for ( key in t ){
-    if ( key === 'Total' ) { continue; }
-    trackers[key] = new CountdownTracker(key, t[key]);
-    this.el.appendChild(trackers[key].el);
-  }
-
-  var i = 0;
-  function updateClock() {
-    timeinterval = requestAnimationFrame(updateClock);
-    
-    // throttle so it's not constantly updating the time.
-    if ( i++ % 10 ) { return; }
-    
-    var t = updateFn(countdown);
-    if ( t.Total < 0 ) {
-      cancelAnimationFrame(timeinterval);
-      for ( key in trackers ){
-        trackers[key].update( 0 );
-      }
-      callback();
-      return;
-    }
-
-    for ( key in trackers ){
-      trackers[key].update( t[key] );
-    }
-  }
-
-  setTimeout(updateClock,500);
-}
-
-//var deadline = new Date(Date.parse(new Date()) + 12 * 24 * 60 * 60 * 1000);
-var deadline = new Date(Date.parse(new Date('2025/12/27')));
-var c = new Clock(deadline, function(){ /* Do something when countdouwn is complete */ });
-var page_timer = document.getElementById('flip_timer');
-if(page_timer){
-  if (c && c.el) {
-  page_timer.appendChild(c.el);
-  }
-}
-
-/*
-var clock = new Clock();
-document.body.appendChild(clock.el);
-*/
-
-$(".showmore").on("click", function (e) {
-  $(this).stop().toggleClass('on');
-  $(".social ul.hidden").stop().slideToggle();
-  e.preventDefault();
-});
-
-setTimeout(function() {
-  $('.mez.alert').fadeOut();
-}, 2000);
+   
 
 
 $(document).ready(function() {
@@ -751,66 +492,7 @@ $(document).ready(function() {
 
 
 
-$(document).ready(function(){
-  function initSlick() {
-    if ($(window).width() <= 991) {
-      if (!$('.cmn-tab-1').hasClass('slick-initialized')) {
-        $('.cmn-tab-1').slick({
-          rtl: ($('html').attr('lang') == 'ar') ? true : false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: true,
-          dots: false,
-          infinite: false,
-          responsive: [{  
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 2,
-            } 
-          }, {
-            breakpoint: 576,
-            settings: { 
-              slidesToShow: 1,
-            }
-          }]
-        }).on('afterChange', function(event, slick, currentSlide){
-          // Trigger the corresponding tab change
-          $('.cmn-tab-1 .nav-link').eq(currentSlide).tab('show');
-        });
-      }
-    } else {
-      if ($('.cmn-tab-1').hasClass('slick-initialized')) {
-        $('.cmn-tab-1').slick('unslick');
-      }
-    }
-  }
-
-  initSlick();
-  $(window).on('resize', function(){
-    initSlick();
-  });
-
-  // $(document).on('click', '.cmn-tab-1 .slick-prev, .cmn-tab-1 .slick-next', function() {
-  //   var currentSlide = $('.cmn-tab-1').slick('slickCurrentSlide');
-  //   $('.cmn-tab-1 .nav-link').eq(currentSlide).tab('show');
-
-  // });
-
-  $(document).on('click', '.cmn-tab-1 .slick-prev, .cmn-tab-1 .slick-next', function() {
-    var currentSlide = $('.cmn-tab-1').slick('slickCurrentSlide');
-    var $navLink = $('.cmn-tab-1 .nav-link').eq(currentSlide);
-    var dataUrl = $navLink.data('url');
-    if (dataUrl) {
-
-        window.open(dataUrl, '_blank');
-    } else {
-    
-        $navLink.tab('show');
-    }
-});
-
-});
-
+ 
 
 
 
