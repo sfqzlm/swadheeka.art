@@ -15706,6 +15706,18 @@ img {
   padding-inline: 10px;
   opacity: 0.7;
 }
+.btn-orange:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#E8BD98), to(#C25C1A));
+  background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
+}
+.btn-blue:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#1C2048), to(#06F0AA));
+  background: linear-gradient(270deg, #1C2048 0%, #06F0AA 100%);
+}
+.btn-red:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#020202), to(#8E131A));
+  background: linear-gradient(270deg, #020202 0%, #8E131A 100%);
+}
 
 .header-main {
   position: fixed;
