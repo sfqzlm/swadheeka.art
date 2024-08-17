@@ -15,7 +15,11 @@
   display: none; /* Hidden by default */
   position: fixed;
   bottom: 0; /* Gap from the bottom */
+<<<<<<< HEAD
   top: 10%; /* Gap from the top */
+=======
+  top: 7%; /* Gap from the top */
+>>>>>>> 456f8e0 (modal height fix.)
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
   width: 90%; /* Set a width, adjust as needed */
@@ -31,7 +35,7 @@
 .modal-content {
   max-height: calc(100vh - 40px); /* Ensure content area does not exceed viewport height */
   overflow-y: auto; /* Allow vertical scrolling within content */
-  
+
   /* Hide scrollbar */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
