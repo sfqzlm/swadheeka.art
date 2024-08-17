@@ -15644,12 +15644,13 @@ p.p-bullet::after {
 }
 @media (min-width: 1400px) {
   .container, .container-lg, .container-xxl {
-    max-width: 1488px;
+    width: 1488px;
+    max-width: 90%;
   }
 }
 @media (max-width: 1488px) {
   .container, .container-lg, .container-xxl {
-    max-width: 1190px;
+    max-width: 90%;
   }
 }
 
@@ -15712,7 +15713,7 @@ img {
   width: 100vw;
   top: 0;
   inset-inline-start: 0;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   padding-bottom: 20px;
   z-index: 10;
   -webkit-transition: all 0.5s ease;
@@ -15796,12 +15797,6 @@ main {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-.work-img:hover img {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
 .work-img img {
   display: block;
   -webkit-filter: grayscale(100%);
@@ -15809,6 +15804,24 @@ main {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   opacity: 0.8;
+}
+.work-item-inner:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.work-item-inner:hover .btn-orange {
+  background: -webkit-gradient(linear, right top, left top, from(#E8BD98), to(#C25C1A));
+  background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
+}
+.work-item-inner:hover .btn-blue {
+  background: -webkit-gradient(linear, right top, left top, from(#1C2048), to(#06F0AA));
+  background: linear-gradient(270deg, #1C2048 0%, #06F0AA 100%);
+}
+.work-item-inner:hover .btn-red {
+  background: -webkit-gradient(linear, right top, left top, from(#020202), to(#8E131A));
+  background: linear-gradient(270deg, #020202 0%, #8E131A 100%);
 }
 .work-item-inner:nth-child(even) {
   -webkit-box-orient: horizontal;
@@ -15856,11 +15869,38 @@ main {
   margin-bottom: 30px;
   min-height: calc(85vh - 50px);
 }
+.creatives-holder:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.creatives-img {
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.creatives-img img {
+  display: block;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  opacity: 0.8;
+}
 
 .contact-holder {
   scroll-margin-top: 150px;
   margin-bottom: 30px;
   min-height: calc(65vh - 50px);
+}
+@media (max-width: 575.98px) {
+  .contact-holder {
+    min-height: auto;
+  }
 }
 .contact-inner {
   display: -webkit-box;
@@ -15944,19 +15984,6 @@ main {
   z-index: 12;
   text-align: center;
 }
-.scrollup-span {
-  width: 90px;
-  height: auto;
-  position: fixed;
-  bottom: 40px;
-  inset-inline-end: 44px;
-  color: #ffffff;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  z-index: 12;
-  text-align: center;
-  display: block;
-}
 .scrollup i {
   width: auto;
   height: auto;
@@ -15964,11 +15991,23 @@ main {
   z-index: 12;
   bottom: 70px;
   inset-inline-end: 80px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-inline: auto;
   color: #ffffff;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border: 2px solid #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
 }
 @media (max-width: 1199.98px) {
   .scrollup {
@@ -15998,8 +16037,23 @@ main {
     font-size: 12px;
   }
   .header-menu {
-    margin-top: 50px;
+    margin-top: 60px;
+    text-align: right;
   }
+  .header-menu a {
+    font-size: 20px;
+  }
+  .header-main:has(.header-menu.show, .header-menu.collapsing) {
+    background-color: rgba(126, 127, 132, 0.85);
+  }
+  .menu-logo {
+    max-width: 30px;
+    -webkit-margin-start: auto;
+            margin-inline-start: auto;
+  }
+}
+.link {
+  cursor: pointer;
 }
 .link:hover {
   opacity: 0.3;

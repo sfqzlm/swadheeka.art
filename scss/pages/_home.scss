@@ -28,18 +28,29 @@ main {
         cursor: pointer;
         transition: all 0.5s linear;
 
-        &:hover {
-            img {
-                filter: grayscale(0);
-                transition: all 0.5s linear;
-            }
-        }
-
         img {
             display: block;
             filter: grayscale(100%);
             transition: all 0.5s linear;
             opacity: 0.8;
+        }
+    }
+
+    &-item-inner{
+        &:hover {
+            img {
+                filter: grayscale(0);
+                transition: all 0.5s linear;
+            }
+            .btn-orange {
+                background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
+            }
+            .btn-blue {
+                background: linear-gradient(270deg, #1C2048 0%, #06F0AA 100%);
+            }
+            .btn-red {
+                background: linear-gradient(270deg, #020202 0%, #8E131A 100%);
+            }
         }
     }
 
@@ -90,6 +101,27 @@ main {
         scroll-margin-top: 150px;
         margin-bottom: 30px;
         min-height: calc(85vh - 50px);
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+                transition: all 0.5s linear;
+            }
+        }
+    }
+    &-img {
+        display: inline-block;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.5s linear;
+
+        img {
+            display: block;
+            filter: grayscale(100%);
+            transition: all 0.5s linear;
+            opacity: 0.8;
+        }
     }
 }
 
@@ -98,6 +130,10 @@ main {
         scroll-margin-top: 150px;
         margin-bottom: 30px;
         min-height: calc(65vh - 50px);
+
+        @include media-breakpoint-down(sm) {
+            min-height: auto;
+        }
     }
 
     &-inner {
@@ -180,20 +216,7 @@ main {
     color: #ffffff;
     transition: all 0.2s ease-in-out;
     z-index: 12;
-    text-align: center;
-
-    &-span {
-        width: 90px;
-        height: auto;
-        position: fixed;
-        bottom: 40px;
-        inset-inline-end: 44px;
-        color: #ffffff;
-        transition: all 0.2s ease-in-out;
-        z-index: 12;
-        text-align: center;
-        display: block;
-    }
+    text-align: center; 
 
     i {
         width: auto;
@@ -202,11 +225,16 @@ main {
         z-index: 12;
         bottom: 70px;
         inset-inline-end: 80px;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-inline: auto;
         color: $white-color;
         transition: all 0.2s ease-in-out;
-
+        border: 2px solid #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
     }
 
     @include media-breakpoint-down(xl) {
@@ -236,11 +264,26 @@ main {
     }
 
     .header-menu {
-        margin-top: 50px;
+        margin-top: 60px;
+        text-align: right;  
+
+        a {
+            font-size: 20px;
+        }
+    }
+
+    .header-main:has(.header-menu.show, .header-menu.collapsing) {
+        background-color: rgba($color: #7E7F84, $alpha: 0.85);
+    }
+
+    .menu-logo { 
+        max-width: 30px;
+        margin-inline-start: auto;
     }
 }
 
 .link {
+    cursor: pointer;
     &:hover {
         opacity: 0.3;
     }
