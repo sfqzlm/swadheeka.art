@@ -15706,18 +15706,6 @@ img {
   padding-inline: 10px;
   opacity: 0.7;
 }
-.btn-orange:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#E8BD98), to(#C25C1A));
-  background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
-}
-.btn-blue:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#1C2048), to(#06F0AA));
-  background: linear-gradient(270deg, #1C2048 0%, #06F0AA 100%);
-}
-.btn-red:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#020202), to(#8E131A));
-  background: linear-gradient(270deg, #020202 0%, #8E131A 100%);
-}
 
 .header-main {
   position: fixed;
@@ -15808,12 +15796,6 @@ main {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-.work-img:hover img {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
 .work-img img {
   display: block;
   -webkit-filter: grayscale(100%);
@@ -15821,6 +15803,24 @@ main {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   opacity: 0.8;
+}
+.work-item-inner:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.work-item-inner:hover .btn-orange {
+  background: -webkit-gradient(linear, right top, left top, from(#E8BD98), to(#C25C1A));
+  background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
+}
+.work-item-inner:hover .btn-blue {
+  background: -webkit-gradient(linear, right top, left top, from(#1C2048), to(#06F0AA));
+  background: linear-gradient(270deg, #1C2048 0%, #06F0AA 100%);
+}
+.work-item-inner:hover .btn-red {
+  background: -webkit-gradient(linear, right top, left top, from(#020202), to(#8E131A));
+  background: linear-gradient(270deg, #020202 0%, #8E131A 100%);
 }
 .work-item-inner:nth-child(even) {
   -webkit-box-orient: horizontal;
