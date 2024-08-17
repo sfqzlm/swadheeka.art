@@ -16023,3 +16023,6 @@ main {
     margin-top: 50px;
   }
 }
+.link:hover {
+  opacity: 0.3;
+}

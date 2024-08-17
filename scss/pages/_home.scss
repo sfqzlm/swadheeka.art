@@ -1,11 +1,11 @@
 .home {
     &-text {
-        min-height: 95vh; 
+        min-height: 95vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 70px; 
-        margin-bottom: 50px; 
+        margin-top: 70px;
+        margin-bottom: 50px;
     }
 }
 
@@ -20,8 +20,8 @@ main {
         margin-bottom: 100px;
         scroll-margin-top: 150px;
     }
-    
-    &-img { 
+
+    &-img {
         display: inline-block;
         border-radius: 20px;
         overflow: hidden;
@@ -29,8 +29,8 @@ main {
         transition: all 0.5s linear;
 
         &:hover {
-            img { 
-                filter: grayscale(0); 
+            img {
+                filter: grayscale(0);
                 transition: all 0.5s linear;
             }
         }
@@ -47,14 +47,14 @@ main {
         flex-direction: row-reverse;
     }
 
-    &-text { 
+    &-text {
         padding-inline-start: 120px;
 
         @include media-breakpoint-down(xl) {
             padding-inline-start: 50px;
         }
 
-        h5 { 
+        h5 {
             margin-bottom: 20px;
         }
 
@@ -64,10 +64,10 @@ main {
             margin-bottom: 5px;
         }
 
-        p { 
+        p {
             font-family: $font-stack-2;
             font-size: 19px;
-            font-weight: 200; 
+            font-weight: 200;
             line-height: 1.3;
             color: $grey-01;
             margin-bottom: 50px;
@@ -105,7 +105,7 @@ main {
         flex-wrap: wrap;
         row-gap: 100px;
 
-        @include media-breakpoint-down(md) { 
+        @include media-breakpoint-down(md) {
             flex-direction: row;
             row-gap: 10px;
         }
@@ -114,28 +114,28 @@ main {
     &-item {
         width: 33.33%;
         min-width: 33.33%;
-        max-width: 33.33%;  
+        max-width: 33.33%;
         font-family: $font-stack-1;
         font-size: 33px;
         font-weight: 600;
-        line-height: 1.3; 
+        line-height: 1.3;
         color: #ffffff;
         text-transform: uppercase;
         //word-break: break-all;
         word-wrap: break-word;
 
-        @include media-breakpoint-down(md) { 
+        @include media-breakpoint-down(md) {
             font-size: 25px;
             // width: auto;
             // min-width: auto;
-            // max-width: 100%;  
-            
+            // max-width: 100%;
+
             width: 50%;
             min-width: 50%;
-            max-width: 50%; 
+            max-width: 50%;
         }
 
-        @include media-breakpoint-down(sm) { 
+        @include media-breakpoint-down(sm) {
             font-size: 18px;
         }
 
@@ -151,36 +151,36 @@ main {
 
         span {
             font-family: $font-stack-2;
-            display: block; 
+            display: block;
             font-size: 23px;
             font-weight: 300;
-            line-height: 1.3; 
+            line-height: 1.3;
             color: #7E7F84;
             margin-top: 20px;
             text-transform: none;
 
-            @include media-breakpoint-down(md) { 
+            @include media-breakpoint-down(md) {
                 font-size: 18px;
                 margin-top: 0px;
             }
 
-            @include media-breakpoint-down(sm) { 
+            @include media-breakpoint-down(sm) {
                 font-size: 14px;
             }
         }
     }
 }
 
- 
+
 
 .scrollup {
-    width: auto; 
+    width: auto;
     inset-inline-end: 80px;
-    display: none; 
-    color: #ffffff; 
+    display: none;
+    color: #ffffff;
     transition: all 0.2s ease-in-out;
-    z-index: 12; 
-    text-align: center; 
+    z-index: 12;
+    text-align: center;
 
     &-span {
         width: 90px;
@@ -188,42 +188,42 @@ main {
         position: fixed;
         bottom: 40px;
         inset-inline-end: 44px;
-        color: #ffffff; 
+        color: #ffffff;
         transition: all 0.2s ease-in-out;
-        z-index: 12; 
+        z-index: 12;
         text-align: center;
-        display: block;  
+        display: block;
     }
-    
+
     i {
         width: auto;
         height: auto;
         position: fixed;
-        z-index: 12; 
+        z-index: 12;
         bottom: 70px;
-        inset-inline-end: 80px; 
+        inset-inline-end: 80px;
         display: block;
         margin-inline: auto;
-        color: $white-color; 
+        color: $white-color;
         transition: all 0.2s ease-in-out;
-        
-    } 
 
-    @include media-breakpoint-down(xl) { 
+    }
+
+    @include media-breakpoint-down(xl) {
         left: 10px;
     }
 
-    @include media-breakpoint-down(md) { 
+    @include media-breakpoint-down(md) {
         display: none !important;
-    } 
+    }
 }
 
 .navbar-toggler {
     display: none;
 }
 
-@include media-breakpoint-down(md) { 
-    .navbar-toggler { 
+@include media-breakpoint-down(md) {
+    .navbar-toggler {
         position: absolute;
         inset-inline-end: 13px;
         border: 2px solid #fff;
@@ -238,5 +238,10 @@ main {
     .header-menu {
         margin-top: 50px;
     }
-} 
+}
 
+.link {
+    &:hover {
+        opacity: 0.3;
+    }
+}
