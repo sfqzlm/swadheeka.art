@@ -87,9 +87,12 @@ h2 {
 	font-size: 69px;
 	line-height: 1.2; 
 
-    @include media-breakpoint-down(md) { 
-        //font-size: 18px;
-		//background-color: green;
+    @include media-breakpoint-down(md) {  
+		font-size: 45px;
+    }
+
+    @include media-breakpoint-down(sm) {  
+		font-size: 34px;
     }
 }
 
@@ -100,6 +103,10 @@ h3 {
     @include media-breakpoint-down(lg) {  
 		font-size: 32px; 
     } 
+
+    @include media-breakpoint-down(sm) {  
+		font-size: 28px;
+    }
 }
 
 h4 { 
@@ -114,7 +121,11 @@ h5 {
     font-size: 40px; 
 
     @include media-breakpoint-down(md) { 
-        font-size: 35px;
+        font-size: 30px;
+    }
+
+	@include media-breakpoint-down(sm) {  
+		font-size: 24px;
     }
 } 
  
@@ -132,14 +143,38 @@ h6 {
 
 .font-57 {
 	font-size: 57px;
+
+	@include media-breakpoint-down(md) { 
+        font-size: 47px;
+    }
+
+    @include media-breakpoint-down(sm) { 
+        font-size: 30px;
+    }
 }
   
 .font-33 {
 	font-size: 33px;
+
+	@include media-breakpoint-down(md) { 
+        font-size: 28px;
+    }
+
+    @include media-breakpoint-down(sm) { 
+        font-size: 22px;
+    }
 }
   
 .font-28 {
 	font-size: 28px;
+
+	@include media-breakpoint-down(md) { 
+        font-size: 23px;
+    }
+
+    @include media-breakpoint-down(sm) { 
+        font-size: 18px;
+    }
 }
 
 .text-justify {
