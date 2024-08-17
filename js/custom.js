@@ -215,17 +215,17 @@
         setTimeout(updateAccordionImage, 400);
     });
   
-    function setDropdownAutoClose() {
-        if (window.innerWidth >= 1199) {
-            $('.nav-item.dropdown .nav-link').attr('data-bs-auto-close', 'true');
-        } else {
-            $('.nav-item.dropdown .nav-link').attr('data-bs-auto-close', 'outside');
-        }
-    } 
-    setDropdownAutoClose(); 
-    $(window).resize(function () {
-        setDropdownAutoClose();
-    });
+    // function setDropdownAutoClose() {
+    //     if (window.innerWidth >= 1199) {
+    //         $('.nav-item.dropdown .nav-link').attr('data-bs-auto-close', 'true');
+    //     } else {
+    //         $('.nav-item.dropdown .nav-link').attr('data-bs-auto-close', 'outside');
+    //     }
+    // } 
+    // setDropdownAutoClose(); 
+    // $(window).resize(function () {
+    //     setDropdownAutoClose();
+    // });
   });
     
   $(document).ready(function() { 

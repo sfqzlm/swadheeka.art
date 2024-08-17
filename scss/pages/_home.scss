@@ -130,6 +130,10 @@ main {
         scroll-margin-top: 150px;
         margin-bottom: 30px;
         min-height: calc(65vh - 50px);
+
+        @include media-breakpoint-down(sm) {
+            min-height: auto;
+        }
     }
 
     &-inner {
@@ -212,20 +216,7 @@ main {
     color: #ffffff;
     transition: all 0.2s ease-in-out;
     z-index: 12;
-    text-align: center;
-
-    &-span {
-        width: 90px;
-        height: auto;
-        position: fixed;
-        bottom: 40px;
-        inset-inline-end: 44px;
-        color: #ffffff;
-        transition: all 0.2s ease-in-out;
-        z-index: 12;
-        text-align: center;
-        display: block;
-    }
+    text-align: center; 
 
     i {
         width: auto;
@@ -234,11 +225,16 @@ main {
         z-index: 12;
         bottom: 70px;
         inset-inline-end: 80px;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-inline: auto;
         color: $white-color;
         transition: all 0.2s ease-in-out;
-
+        border: 2px solid #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
     }
 
     @include media-breakpoint-down(xl) {
@@ -268,7 +264,21 @@ main {
     }
 
     .header-menu {
-        margin-top: 50px;
+        margin-top: 60px;
+        text-align: right;  
+
+        a {
+            font-size: 20px;
+        }
+    }
+
+    .header-main:has(.header-menu.show, .header-menu.collapsing) {
+        background-color: rgba($color: #7E7F84, $alpha: 0.85);
+    }
+
+    .menu-logo { 
+        max-width: 30px;
+        margin-inline-start: auto;
     }
 }
 
