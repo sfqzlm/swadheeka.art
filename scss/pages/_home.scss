@@ -91,6 +91,26 @@ main {
         margin-bottom: 30px;
         min-height: calc(85vh - 50px);
     }
+    &-img {
+        display: inline-block;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.5s linear;
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+                transition: all 0.5s linear;
+            }
+        }
+        img {
+            display: block;
+            filter: grayscale(100%);
+            transition: all 0.5s linear;
+            opacity: 0.8;
+        }
+    }
 }
 
 .contact {
@@ -241,6 +261,7 @@ main {
 }
 
 .link {
+    cursor: pointer;
     &:hover {
         opacity: 0.3;
     }
