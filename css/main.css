@@ -15868,17 +15868,17 @@ main {
   margin-bottom: 30px;
   min-height: calc(85vh - 50px);
 }
+.creatives-holder:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
 .creatives-img {
   display: inline-block;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-.creatives-img:hover img {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }

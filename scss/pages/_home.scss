@@ -101,6 +101,13 @@ main {
         scroll-margin-top: 150px;
         margin-bottom: 30px;
         min-height: calc(85vh - 50px);
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+                transition: all 0.5s linear;
+            }
+        }
     }
     &-img {
         display: inline-block;
@@ -109,12 +116,6 @@ main {
         cursor: pointer;
         transition: all 0.5s linear;
 
-        &:hover {
-            img {
-                filter: grayscale(0);
-                transition: all 0.5s linear;
-            }
-        }
         img {
             display: block;
             filter: grayscale(100%);
