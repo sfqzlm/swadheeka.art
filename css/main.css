@@ -15665,26 +15665,6 @@ img {
   --bs-border-radius: 6px;
 }
 .btn-view-now {
-  display: inline-flex; /* Use inline-flex for consistent behavior */
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
-  width: 295px; /* Fixed width */
-  height: 73px; /* Fixed height */
-  border-radius: 20px; /* Rounded corners */
-  background: linear-gradient(270deg, #7e7f84 0%, rgba(2, 2, 2, 0) 100%); /* Gradient background */
-  font-family: "Syne", sans-serif; /* Font styling */
-  font-size: 16px; /* Font size */
-  font-weight: 400; /* Font weight */
-  text-transform: uppercase; /* Uppercase text */
-  color: #ffffff; /* Text color */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline for links */
-  border: none; /* Remove border */
-  cursor: pointer; /* Pointer cursor on hover */
-  box-shadow: none; /* Remove shadow */
-  transition: background 0.5s linear; /* Smooth background transition */
-}
-/* .btn-view-now {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -15708,8 +15688,7 @@ img {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   border: 0;
-} */
-
+}
 @media (max-width: 767.98px) {
   .btn-view-now {
     width: auto;
@@ -15717,7 +15696,6 @@ img {
     padding: 20px 30px !important;
   }
 }
-
 @media (max-width: 1199.98px) {
   .btn-view-now {
     padding-inline: 10px;
