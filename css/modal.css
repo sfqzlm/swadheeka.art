@@ -15,11 +15,11 @@
   display: none; /* Hidden by default */
   position: fixed;
   bottom: 0; /* Gap from the bottom */
-  top: 2%; /* Gap from the top */
+  top: 10%; /* Gap from the top */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
   width: 90%; /* Set a width, adjust as needed */
-  max-height: 96%; /* Set a max height to fit within the viewport */
+  max-height: 90%; /* Set a max height to fit within the viewport */
   background-color: transparent; /* Make background transparent */
   border-radius: 2px;
   overflow: hidden; /* Hide overflow for the modal */
