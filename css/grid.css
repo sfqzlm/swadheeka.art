@@ -1,0 +1,119 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(170, 1fr);
+    grid-template-rows: repeat(90, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    min-height: 45vh;
+}
+
+.left-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.left-in-hide {
+    display: block;
+}
+
+.from-left {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.grid-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.grid-item:hover {
+    filter: grayscale(0%);
+}
+
+.item1 { 
+    background-image: url('../assets/grid/1.jpg'); 
+    grid-column: 28 / span 32;
+    grid-row: 14 / span 18;
+}
+
+.item2 { 
+    background-image: url('../assets/grid/2.jpg'); 
+    grid-column: 61 / span 31;
+    grid-row: 9 / span 17;
+}
+
+.item3 { 
+    background-image: url('../assets/grid/3.jpg'); 
+    grid-column: 94 / span 17;
+    grid-row: 9 / span 16;
+}
+
+.item4 { 
+    background-image: url('../assets/grid/4.jpg'); 
+    grid-column: 113 / span 30;
+    grid-row: 9 / span 16;
+}
+
+.item5 { 
+    background-image: url('../assets/grid/5.jpg'); 
+    grid-column: 4 / span 30;
+    grid-row: 33 / span 26;
+}
+
+.item6 { 
+    background-image: url('../assets/grid/6.jpg'); 
+    grid-column: 36 / span 28;
+    grid-row: 34 / span 25;
+}
+
+.item7 { 
+    background-image: url('../assets/grid/7.jpg'); 
+    grid-column: 67 / span 42;
+    grid-row: 27 / span 44;
+}
+
+.item8 { 
+    background-image: url('../assets/grid/8.jpg'); 
+    grid-column: 112 / span 37;
+    grid-row: 28 / span 18;
+}
+
+.item9 { 
+    background-image: url('../assets/grid/9.jpg'); 
+    grid-column: 26 / span 38;
+    grid-row: 60 / span 21;
+}
+
+.item10 { 
+    background-image: url('../assets/grid/10.jpg'); 
+    grid-column: 112 / span 28;
+    grid-row: 48 / span 23;
+}
+
+.item11 { 
+    background-image: url('../assets/grid/11.jpg'); 
+    grid-column: 142 / span 28;
+    grid-row: 47 / span 24;
+}
+
+.item12 { 
+    background-image: url('../assets/grid/12.jpg'); 
+    grid-column: 67 / span 50;
+    grid-row: 74 / span 16;
+}
+
+.item13 { 
+    background-image: url('../assets/grid/13.jpg'); 
+    grid-column: 120 / span 34;
+    grid-row: 72 / span 19;
+}
