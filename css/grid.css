@@ -79,7 +79,7 @@
 .item7 { 
     background-image: url('../assets/grid/7.jpg'); 
     grid-column: 67 / span 42;
-    grid-row: 27 / span 44;
+    grid-row: 27 / span 50;
 }
 
 .item8 { 
@@ -109,7 +109,7 @@
 .item12 { 
     background-image: url('../assets/grid/12.jpg'); 
     grid-column: 67 / span 50;
-    grid-row: 74 / span 16;
+    grid-row: 79 / span 16;
 }
 
 .item13 { 
