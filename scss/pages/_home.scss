@@ -46,15 +46,15 @@ main {
                 background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
             }
             .btn-blue {
-                background: linear-gradient(270deg, #1C2048 0%, #06F0AA 100%);
+                background: linear-gradient(270deg, #06F0AA 0%, #1C2048 100%);
             }
             .btn-red {
-                background: linear-gradient(270deg, #020202 0%, #8E131A 100%);
+                background: linear-gradient(270deg, #8E131A 0%, #020202 100%);
             }
         }
     }
 
-    &-item-inner:nth-child(even) {
+    &-item-inner:nth-child(odd) {
         flex-direction: row-reverse;
     }
 
@@ -216,7 +216,7 @@ main {
     color: #ffffff;
     transition: all 0.2s ease-in-out;
     z-index: 12;
-    text-align: center; 
+    text-align: center;
 
     i {
         width: auto;
@@ -265,7 +265,7 @@ main {
 
     .header-menu {
         margin-top: 60px;
-        text-align: right;  
+        text-align: right;
 
         a {
             font-size: 20px;
@@ -276,7 +276,7 @@ main {
         background-color: rgba($color: #7E7F84, $alpha: 0.85);
     }
 
-    .menu-logo { 
+    .menu-logo {
         max-width: 30px;
         margin-inline-start: auto;
     }
