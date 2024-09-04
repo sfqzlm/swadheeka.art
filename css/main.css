@@ -15816,8 +15816,8 @@ main {
   background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
 }
 .work-item-inner:hover .btn-blue {
-  background: -webkit-gradient(linear, right top, left top, from(#06F0AA), to(#1C2048));
-  background: linear-gradient(270deg, #06F0AA 0%, #1C2048 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#26bd90), to(#1C2048));
+  background: linear-gradient(270deg, #26bd90 0%, #1C2048 100%);
 }
 .work-item-inner:hover .btn-red {
   background: -webkit-gradient(linear, right top, left top, from(#8E131A), to(#020202));
