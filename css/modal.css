@@ -61,8 +61,7 @@
   line-height: 50px; /* Center text vertically */
   cursor: pointer; /* Pointer cursor to indicate it's clickable */
   z-index: 1001; /* High z-index to ensure it's on top of other elements */
-  background-color: rgb(85, 84, 84); /* Background color */
-  color: #fff; /* White text color */
+  color: rgb(62, 61, 61); /* White text color */
   border: 2px solid rgb(62, 61, 61); /* Border to match the background */
   border-radius: 50%; /* Makes the button circular */
   display: flex; /* Use flexbox to center text */
