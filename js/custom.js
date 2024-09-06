@@ -1,5 +1,49 @@
 
 (function ($) {
+
+  // ********************* Scroll Animation ScrollMagic *********************
+
+  if ($(".bottom-in, .fadein, .left-in, .right-in ").length) {
+    var controller = new ScrollMagic.Controller();
+
+    $(".bottom-in").each(function () {
+      $(this).addClass("bottom-in-hide");
+      var t = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: .80
+      }).setClassToggle(this, 'from-bottom')
+        .addTo(controller);
+    });
+
+    $(".fadein").each(function () {
+      $(this).addClass("show-item");
+      var t = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 1
+      }).setClassToggle(this, 'show-item')
+        .addTo(controller);
+    });
+
+    $(".left-in").each(function () {
+      $(this).addClass("left-in-hide");
+      var t = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: .85,
+      }).setClassToggle(this, 'from-left')
+        .addTo(controller);
+    });
+
+    $(".right-in").each(function () {
+      $(this).addClass("right-in-hide");
+      var t = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: .85,
+
+      }).setClassToggle(this, 'from-right')
+        .addTo(controller);
+    });
+  }
+
   $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 200) {
@@ -20,6 +64,17 @@
     $(".scrollup").click(function () {
       $(window).scrollTop(0);
     });
+
+    // When the navbar is about to be shown
+    $('#headerMenu').on('show.bs.collapse', function () {
+      $('.toggler-text').addClass('toggler-text-close'); // Change text to 'Close Menu'
+    });
+
+    // When the navbar is about to be hidden
+    $('#headerMenu').on('hide.bs.collapse', function () {
+      $('.toggler-text').removeClass('toggler-text-close'); // Change text back to 'Open Menu'
+    });
+
   });
 
   // Select all links inside the navbar
@@ -32,7 +87,6 @@
   });
 
 })(jQuery);
-
 
 
 $(document).ready(function () {
