@@ -18,6 +18,22 @@
         @include media-breakpoint-down(md) {
             padding-top: 10px;
         }
+        .toggler-text{
+            i{
+                display: none;
+            }
+            .text{
+                display: block;
+            }
+            &.toggler-text-close{
+                i{
+                    display: block;
+                }
+                .text{
+                    display: none;
+                }
+            }
+        }
     }
 
     &-logo {

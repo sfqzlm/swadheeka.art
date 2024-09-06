@@ -15730,6 +15730,18 @@ img {
     padding-top: 10px;
   }
 }
+.header-main .toggler-text i {
+  display: none;
+}
+.header-main .toggler-text .text {
+  display: block;
+}
+.header-main .toggler-text.toggler-text-close i {
+  display: block;
+}
+.header-main .toggler-text.toggler-text-close .text {
+  display: none;
+}
 .header-logo {
   color: #ffffff;
 }
