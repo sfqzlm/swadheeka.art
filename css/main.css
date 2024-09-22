@@ -15824,16 +15824,16 @@ main {
   transition: all 0.5s linear;
 }
 .work-item-inner:hover .btn-orange {
-  background: -webkit-gradient(linear, right top, left top, from(#E8BD98), to(#C25C1A));
-  background: linear-gradient(270deg, #E8BD98 0%, #C25C1A 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#D89362), to(#C96E31));
+  background: linear-gradient(270deg, #D89362 0%, #C96E31 100%);
 }
 .work-item-inner:hover .btn-blue {
-  background: -webkit-gradient(linear, right top, left top, from(#26bd90), to(#1C2048));
-  background: linear-gradient(270deg, #26bd90 0%, #1C2048 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#156A62), to(#1D2149));
+  background: linear-gradient(270deg, #156A62 0%, #1D2149 100%);
 }
 .work-item-inner:hover .btn-red {
-  background: -webkit-gradient(linear, right top, left top, from(#8E131A), to(#020202));
-  background: linear-gradient(270deg, #8E131A 0%, #020202 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#600E13), to(#250709));
+  background: linear-gradient(270deg, #600E13 0%, #250709 100%);
 }
 .work-item-inner:nth-child(odd) {
   -webkit-box-orient: horizontal;
